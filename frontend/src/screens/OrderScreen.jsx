@@ -46,12 +46,12 @@ const OrderScreen = () => {
   useEffect(() => {
     if (token) {
       window.snap.pay(token, {
-        onSuccess: (result) => {
+        onSuccess: () => {
           payOrder(orderId);
           refetch();
           window.location.href = `/order/${orderId}`;
         },
-        onPending: (result) => {
+        onPending: () => {
           window.location.href = `/order/${orderId}`;
         },
         onError: (error) => {
@@ -64,7 +64,7 @@ const OrderScreen = () => {
         },
       });
     }
-  }, [token]);
+  }, [token, payOrder, refetch, orderId]);
 
   const fetchMidtransClientKey = async () => {
     try {

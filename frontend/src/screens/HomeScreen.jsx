@@ -3,9 +3,7 @@ import Product from "../components/Product";
 import { useGetProductsQuery } from "../slices/productApiSlice";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
-import { Link, useParams } from "react-router-dom";
-import Paginate from "../components/Paginate";
-import ProductCarosel from "../components/ProductCarosel";
+import { useParams } from "react-router-dom";
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -16,13 +14,6 @@ const HomeScreen = () => {
 
   return (
     <>
-      {!keyword ? (
-        <ProductCarosel />
-      ) : (
-        <Link to="/" className="btn btn-light">
-          Go Back
-        </Link>
-      )}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -31,7 +22,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <h1>Latest Products</h1>
+          <h1 className="text-2xl font-bold mb-4">Latest Products</h1>
           <Row className="mb-2">
             {data.products.map((product) => (
               <Col
@@ -46,11 +37,6 @@ const HomeScreen = () => {
               </Col>
             ))}
           </Row>
-          <Paginate
-            pages={data.pages}
-            page={data.page}
-            keyword={keyword ? keyword : ""}
-          />
         </>
       )}
     </>
