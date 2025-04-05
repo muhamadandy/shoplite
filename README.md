@@ -8,13 +8,13 @@ Shoplite adalah aplikasi website e-commerce yang dibangun menggunakan MERN Stack
 Akses : https://shoplite-production.up.railway.app/
 Berikut kredensial login untuk mencoba aplikasi:
 
-👑 Admin
-Email: admin@gmail.com
-Password: admin123
+👑 Admin<br/>
+Email: admin@gmail.com<br/>
+Password: admin123<br/>
 
-👤 User Biasa
-Email: john@gmail.com
-Password: john123
+👤 User Biasa<br/>
+Email: john@gmail.com<br/>
+Password: john123<br/>
 
 ## 📦 Teknologi yang Digunakan
 
