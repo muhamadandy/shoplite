@@ -5,7 +5,7 @@ Shoplite adalah aplikasi website e-commerce yang dibangun menggunakan MERN Stack
 ---
 
 ##  Demo Aplikasi
-Akses : https://shoplite-production.up.railway.app/
+Akses : https://shoplite-production.up.railway.app/<br/>
 Berikut kredensial login untuk mencoba aplikasi:
 
 👑 Admin<br/>
